@@ -123,6 +123,7 @@ def solve():
             pygame.draw.rect(WIN, TAN, ((j+1)*50, (i+1)*50, SMALL_BOX_WIDTH, SMALL_BOX_WIDTH))
             value = MYFONT.render(str(SudokuSolver.solved_board[i][j]), True, BLACK)
             WIN.blit(value, ((j+1)*50 + X_BUFFER, (i+1)*50))
+            pygame.draw.rect(WIN, TAN, (0, 600, 550, 50))
 
 def check():
     mistakes = 0
@@ -149,7 +150,8 @@ def initialize():
     clear()
     SudokuSolver.create_player_board()
     SudokuSolver.solve()
-    draw_base_numbers() 
+    draw_base_numbers()
+    pygame.draw.rect(WIN, TAN, (0, 600, 550, 50)) 
 
 def main():
     initialize()

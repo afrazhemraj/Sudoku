@@ -5,16 +5,6 @@ import requests
 response = requests.get("https://sugoku.herokuapp.com/board?difficulty=easy")
 board = response.json()['board']
 
-# board = [[0,0,0,1,2,3,0,8,0], 
-#         [1,0,0,0,0,0,0,3,7],
-#         [0,0,8,7,4,6,9,0,0],
-#         [3,0,5,0,0,0,6,2,9],
-#         [7,2,6,0,0,0,0,0,0],
-#         [8,0,1,0,0,0,3,0,4],
-#         [0,0,7,9,0,0,2,0,3],
-#         [9,0,3,4,7,0,0,6,5],
-#         [0,5,0,6,0,8,0,0,1]]
-
 player_board = [[0,0,0,0,0,0,0,0,0], 
                 [0,0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0,0],
@@ -71,9 +61,8 @@ def create_player_board():
             player_board[i][j] = board[i][j]
             solved_board[i][j] = board[i][j]
   
-create_player_board()
-solve()
+#create_player_board()
+#solve()
 #print(np.matrix(solved_board))
-print(np.matrix(solved_board))
 #print(np.matrix(player_board))
 
